@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecomerce</title>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+  <!--  style file-->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/mdb.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- font file-->
+  <link rel="stylesheet" href="fonts/css/all.css">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> -->
+</head>
+
+<body>
+  
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("days").innerHTML = days + "d " ;
+  document.getElementById("hours").innerHTML =hours + "h ";
+  document.getElementById("minutes").innerHTML = minutes + "m " ;
+  document.getElementById("seconds").innerHTML =  seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+   <!-- <div class="container-xxl">
+   <aside class="store-notice bg-primary text-white m-0">
+               <div class="container p-2 text-center"> Due to the <strong>COVID 19</strong> epidemic, orders may be processed with a slight delay</div>
+            </aside>
+          </div> -->
+  <!-- *****************navbar-start******************* -->
+  <div class="menu">
+    <nav class="navbar navbar-expand-md py-3">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="img/chetu ecs-logos_black.png" id="logo-size"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="icon"><i class="fa fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+           <li id="link-2" class="nav-item dropdown-hover mx-2">
+        <a class="nav-link dropdown-hover-button" href="#">Products <i class="fas fa-caret-down"></i></a>
+        <div class="dropdown-hover-content">
+          <div class="row">
+            <div class="col-lg-2">
+              <div class="mb-2">
+                <h6><a class="colour-2" href="#">Product list 1</a></h6>
+                <a class="dropdown-item p-0" href="#">Sub Page</a>
+                <a class="dropdown-item p-0" href="#">Sub Page</a>
+                <a class="dropdown-item p-0" href="#">Sub Page</a>
+                <a class="dropdown-item p-0" href="#">Sub Page</a>
+                <a class="dropdown-item p-0" href="#">Sub Page</a>
+                <a class="dropdown-item p-0" href="#">Sub Page</a>
+              </div>
+            </div>
+        
+           
+         
+            
+           
+          </div>
+        </div>
+      </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li> -->
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa fa-search"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa fa-cart-plus"></i>
+              </a>
+            </li>
+        </div>
+    </nav>
+  </div>
+
+
+  <!-- --------------------banner------------------- -->
+  <div class="banner">
+    <div class="inner-banner d-flex justify-content-end align-items-center">
+      <div class="caption">
+
+        <div class="img-logo">
+          <!--logo-- -->
+        </div>
+
+
+        <p class="m-0">HOT DEALS THIS WEEK</p>
+        <h2 id="flat-offer-text">Flat 35% Off Everything</h2>
+
+        <div class="time-date">
+          <a id="days"></a>
+          <a id="hours"></a>
+          <a id="minutes"></a>
+          <a id="seconds"></a>
+        </div>
+        <div id="btn-banner"><button class="btn"> Shop Now </button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- --------------------shop by category------------------- -->
+  <div class="categrory">
+
+    <div class="container">
+      <!-- <div class="text-center"><img src="img/img/icon.jpg" width="100" height="100"></div> -->
+      <h2 id="shop-cat">Shop By Category</h2>
+      <div class="row">
+        <div class="col-lg-2  col-md-3 col-sm-4 col-6 ">
+          <div class="gift-box text-center card">
+            <img src="img/laptop.jpg" class="img-fluid">
+            <h5 class="mt-1">Laptop</h5>
+            <p>3 brands</p>
+            <p>21 products</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2  col-md-3 col-sm-4 col-6">
+          <div class="gift-box text-center card">
+            <img src="img/phone.jpg" class="img-fluid">
+            <h5 class="mt-1">Mobile</h5>
+            <p>5 brands</p>
+            <p>50 products</p>
+          </div>
+        </div>
+
+
+        <div class="col-lg-2  col-md-3 col-sm-4 col-6">
+          <div class="gift-box text-center card">
+            <img src="img/headphone.jpg" class="img-fluid">
+            <h5 class="mt-1">Headphone</h5>
+            <p>3 brands</p>
+            <p>40 products</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2  col-md-3 col-sm-4 col-6">
+          <div class="gift-box text-center card">
+            <img src="img/watch.jpg" class="img-fluid">
+            <h5 class="mt-1">Watch</h5>
+            <p>3 brands</p>
+            <p>15 products</p>
+          </div>
+        </div>
+
+
+        
+        <div class="col-lg-2  col-md-3 col-sm-4 col-6">
+          <div class="gift-box text-center card">
+            <img src="img/camera.jpg" class="img-fluid">
+            <h5 class="mt-1">Camera</h5>
+            <p>2 brands</p>
+            <p>15 products</p>
+          </div>
+        </div>
+        <div class="col-lg-2  col-md-3 col-sm-4 col-6">
+          <div class="gift-box text-center card">
+            <img src="img/ledtv.jpg" class="img-fluid">
+            <h5 class="mt-1">LED</h5>
+            <p>5 brands</p>
+            <p>45 products</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  ----------------product-card--------------------------->
+  <div class="products">
+    <!-- <div class="text-center"><img src="img/img/icon.jpg" width="100" height="100"></div> -->
+    <h2 id="shop-product" class="mb-4">Our Product</h2>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="box-card card text-center">
+            <!-- img  -->
+            <div class="inner-card">
+              <img src="./img/phone.jpg" class="img-fluid">
+            </div>
+            <!-- img-close-->
+            <!-- <p class="py-2 m-0">Market place</p> -->
+            <h6 class="py-2 m-0">Chetu cPhone 13 Pro Max (256 GB Storage, Silver)</h6>
+            <span class="text-danger">$123.59 </span><br>
+            <button class="btn btn-dark  btn-sm ">Add To Cart</button>
+          </div>
+        </div>
+        <!-- item copy   -->
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="box-card card text-center">
+            <!-- img  -->
+            <div class="inner-card">
+              <img src="img/watch.jpg" class="img-fluid">
+            </div>
+            <!-- img-close-->
+            <!-- <p class="py-2 m-0">Market place</p> -->
+            <h6 class="py-2 m-0">Smart Watches</h6>
+            <span class="text-danger">$70.00</span><br>
+            <button class="btn btn-dark  btn-sm ">Add To Cart</button>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="box-card card text-center">
+            <!-- img  -->
+            <div class="inner-card">
+              <img src="img/headphone.jpg" class="img-fluid">
+            </div>
+            <!-- img-close-->
+            <!-- <p class="py-2 m-0">Market place</p> -->
+            <h6 class="py-2 m-0">Truely Wireless Headfone</h6>
+            <span class="text-danger">$35.00</span><br>
+            <button class="btn btn-dark  btn-sm ">Add To Cart</button>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="box-card card text-center">
+            <!-- img  -->
+            <div class="inner-card">
+              <img src="img/ledtv.jpg" class="img-fluid">
+            </div>
+            <!-- img-close-->
+            <!-- <p class="py-2 m-0">Market place</p> -->
+            <h6 class="py-2 m-0">Chetu TV</h6>
+            <span class="text-danger">$20.00</span><br>
+            <button class="btn btn-dark  btn-sm ">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="box-banner">
+    <div class="container d-flex align-items-center justify-content-center" style="height:350px;">
+      <div class="box-baner text-danger text-center">
+        <h2>Happy Holi </h2>
+        <h4>To All Our Customers</h4>
+        <button class="btn btn-danger btn-md"> Shop Now</button>
+      </div>
+    </div>
+  </div> -->
+
+  <!--  -----------------new products-------------------->
+
+  <!--  ----------------product-card--------------------------->
+  <!-- <div class="products">
+    <div class="text-center"><img src="img/img/icon.jpg" width="100" height="100"></div>
+    <h2 id="shop-product" class="mb-4">Our Product</h2>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="box-card card text-center">
+            
+            <div class="inner-card">
+              <img src="./img/phone.jpg" class="img-fluid">
+            </div>
+            
+            <p class="py-2 m-0">Market place</p>
+            <h6>Cosmedica Hyradic Syrum For <br> Skin </h6>
+            <span class="text-danger">$154.00</span><br>
+            <button class="btn btn-dark  btn-sm ">Add To Cart</button>
+          </div>
+        </div>
+        
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="box-card card text-center">
+           
+            <div class="inner-card">
+              <img src="img/phone.jpg" class="img-fluid">
+            </div>
+           
+            <p class="py-2 m-0">Market place</p>
+            <h6>Cosmedica Hyradic Syrum For <br> Skin </h6>
+            <span class="text-danger">$154.00</span><br>
+            <button class="btn btn-dark  btn-sm ">Add To Cart</button>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="box-card card text-center">
+            <div class="inner-card">
+              <img src="img/phone.jpg" class="img-fluid">
+            </div>
+            <p class="py-2 m-0">Market place</p>
+            <h6>Cosmedica Hyradic Syrum For <br> Skin </h6>
+            <span class="text-danger">$154.00</span><br>
+            <button class="btn btn-dark  btn-sm ">Add To Cart</button>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="box-card card text-center">
+            <div class="inner-card">
+              <img src="img/phone.jpg" class="img-fluid">
+            </div>
+            <p class="py-2 m-0">Market place</p>
+            <h6>Cosmedica Hyradic Syrum For <br> Skin </h6>
+            <span class="text-danger">$154.00</span><br>
+            <button class="btn btn-dark  btn-sm ">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+
+
+
+
+
+
+
+
+  <!---------------------Img-card-section---------------------->
+
+  <!-- <div class="img-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="img-left">
+
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="img-center  text-center d-flex">
+            <div class="img-caption  m-auto text-warning">
+              <span>The gift off</span>
+              <h5>Holi Share <br>The Home</h5>
+              <button class="btn btn-warning btn-sm">Shop Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="img-right">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+
+  <!---------------------------------- footer-area--------------------------- -->
+  <footer class="my-2 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="address">
+            <h6>Call To Order</h6>
+            <h3>83-188-76336</h3>
+            <!-- <p>All-in-one Products are here!!!</p> -->
+            <p><span>Address:</span>Bramhaputra Market, Noida</p>
+            <p><span>Support:</span>+1-1800-1800</p>
+            <p class="text-danger"><span class="text-dark">Email:</span>awaneesh@yopmail.com</p>
+
+
+
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="account">
+            <h6>ACCOUNTS</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">Order Status</a></li>
+              <li><a href="#"> Shipping</a></li>
+              <li><a href="#">Catalogue Preference</a></li>
+              <li><a href="#">Return</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="about">
+            <h6>WHO WE ARE</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Guarantee</a></li>
+              <li><a href="#"> Good Works</a></li>
+              <li><a href="#">Careers</a></li>
+              <!-- <li><a href="#">Tax Notice</a></li> -->
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="customer">
+            <h6>CUSTOMER SRVICE</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">My Accounts</a></li>
+              <li><a href="#">Affiliate</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">FAQs</a></li>
+              <!-- <li><a href="#">Site Map</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!---  script           -->
+  <script>
+
+
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 60) {
+          $(".menu").addClass("navbar-scroll");
+        }
+        else {
+          $(".menu").removeClass("navbar-scroll");
+        }
+      });
+    });
+  </script>
+
+  <script src="js/wow.min.js"></script>
+  </script>
+</body>
+
+</html>
